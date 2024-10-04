@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Ecommerce Page</title>
+    <link rel="stylesheet" href="Shopping-app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body onload="home()">
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="content">
+                <div class="logo" onclick="home()">Ecommerce</div>
+                <div class="toggle" id="toggle">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <nav class="nav">
+                    <ul class="links" id="links">
+                        <li><a href="#home" onclick="home()">Home</a></li>
+                        <li><a href="#product" onclick="product()" >Products </a></li>
+                        <li><a href="#about" onclick="about()">About</a></li>
+                        <li><a href="#contact" onclick="contact()">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="buttons">
+                    <button class="button" id="login"><span class="icon"><i class="fa-solid fa-right-to-bracket"></i>Login</span></button>
+                    <button class="button" id="Register"><span class="icon"><i class="fa-solid fa-user-plus"></i>Register</span></button>
+                    <button class="button" id="Cart " onclick="button()"><i class="fa-solid fa-cart-shopping"></i>Cart (<span id="cart-count">0</span>)</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section id="home" class="section">
+        <section class="banner"> 
+            <div class="banner-content">
+                <h2>New Season Arrivals</h2>
+                <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+        </section> 
+        <div class="products1">
+            <h1>Latest Products</h1>
+            <hr>
+        </div>
+        <div class="filter-buttons">
+            <button id="filter-all">All</button>
+            <button id="filter-mens">Men's Clothing</button>
+            <button id="filter-womens">Women's Clothing</button>
+            <button id="filter-jewelry">Jewelry</button>
+            <button id="filter-electronics">Electronics</button>
+        </div>
+        <div class="mainPageEle">
+            <div class="renderData"></div>
+        </div>
+    </section> 
+    <section class="section" id="product">
+        <div class="products1">
+            <h1>Latest Products</h1>
+            <hr>
+        </div>
+        <div class="filter-buttons">
+            <button id="filter-all1">All</button>
+            <button id="filter-mens1">Men's Clothing</button>
+            <button id="filter-womens1">Women's Clothing</button>
+            <button id="filter-jewelry1">Jewelry</button>
+            <button id="filter-electronics1">Electronics</button>
+        </div>
+        <div class="mainPageEle1">
+            <div class="renderData1"></div>
+        </div>
+    </section>
+    <section class="section" id="contact">
+        <section class="contacts">
+            <h1>Contact Us</h1>
+            <hr>
+            <form class="contactForm">
+                <label for="name">Name</label><br>
+                <input type="text" id="name" placeholder="Enter your name" required><br>
+    
+                <label for="email">Email</label><br>
+                <input type="email" id="email" placeholder="name@example.com" required><br>
+    
+                <label for="message">Message</label><br>
+                <textarea id="message" rows="5" placeholder="Enter your message" required></textarea><br>
+    
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </section>
+    <section id="about" class="section">
+        <section class="about">
+            <h1>About Us</h1>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum facere doloremque veritatis odit similique sequi. Odit amet fuga nam quam quasi facilis sed doloremque saepe sint perspiciatis explicabo totam vero quas provident ipsam, veritatis nostrum velit quos recusandae est mollitia esse fugit dolore laudantium. Ex vel explicabo earum unde eligendi autem praesentium, doloremque distinctio nesciunt porro tempore quis eaque labore voluptatibus ea necessitatibus exercitationem tempora molestias. Ad consequuntur veniam sequi ullam tempore vel tenetur soluta dolore sunt maxime aliquam corporis est, quo saepe dolorem optio minus sint nemo totam dolorum! Reprehenderit delectus expedita a alias nam recusandae illo debitis repellat libero, quasi explicabo molestiae saepe, dolorem tempore itaque eveniet quam dignissimos blanditiis excepturi harum numquam vel nihil? Ipsum</p>
+        </section>
+        <section class="about-products">
+            <h2>Our Products</h2>
+            <div class="about-product-list">
+                <div class="about-product">
+                    <img src="../photo/mens clothing.jpg" alt="Men's Clothing">
+                    <p>Mens's Clothing</p>
+                </div>
+                <div class="about-product">
+                    <img src="../photo/Women clothing.jpg" alt="Women's Clothing">
+                    <p>Women's Clothing</p>
+                </div>
+                <div class="about-product">
+                    <img src="../photo/jewelery.jpg" alt="Jewelry">
+                    <p>Jewelry</p>
+                </div>
+                <div class="about-product">
+                    <img src="../photo/electronics.jpg" alt="Electronics">
+                    <p>Electronics</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="cart" class="section">
+        <div id="empty-cart-message" class="emptyCart">
+            <h1>Cart</h1>
+            <hr>
+            <div class="cart-empty">
+                <p>Your Cart is Empty</p>
+                <button onclick="home()"><i class="fa-solid fa-arrow-left"></i>Continue Shopping</button>
+            </div>
+            </div>
+        </div>
+        <div class="cart-container" id="cart-container">
+            <div class="item-list" style="display: none;">
+                <h2>Item List</h2>
+                <div class="cart-list" id="cart-list"></div>
+            </div>
+            <div class="cart-summary" id="cart-summary" style="display: none;">
+                <h2>Order Summary</h2>
+                <p>Products(<span id="cart-count1">0</span>)<span id="total-price">$0.00</span></p>
+                <p>Shipping   <span id="shipping-amount">$0.00</span></p>
+                <p>Total Amount <span id="final-price">$0.00</span></p>
+                <button class="checkout-btn">Go to Checkout</button>
+            </div>
+        </div>
+        
+    </section>
+    <footer>
+        <p>Made with ❤️ by A.Devendra Naidu</p>
+    </footer>
+
+    <script src="Shopping-app.js"></script>
+</body>
+</html>
