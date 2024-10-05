@@ -160,13 +160,15 @@ function loadCartFromLocalStorage() {
         updateCart(); 
     }
 }
-
-window.onload = function() {
+function loadPage() {
     loadCartFromLocalStorage();
-    getData();
+    const lastVisitedPage = localStorage.getItem('lastPage');
+    if (lastVisitedPage) {
+        window[lastVisitedPage]();
+    } else {
+        home();
+    }
 }
-
-
 getData();
 
 
@@ -178,6 +180,7 @@ let contacts=document.querySelector("#contact");
 let homes=document.querySelector("#home");
 let products=document.querySelector("#product");
 let carts=document.querySelector("#cart");
+
 function home(){
     homes.style.display="block";
     products.style.display="none";
