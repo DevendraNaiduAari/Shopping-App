@@ -115,9 +115,9 @@ function updateCart() {
                 <input type="text" value="${item.quantity}" readonly>
                 <button onclick="increaseQuantity(${item.id})">+</button>
             </div>
-            <div>
-               <p>${item.quantity} x $${(item.price).toFixed(2)}</p>
-            </div>
+        </div>
+        <div class="cart-row1">
+            <p>${item.quantity} x $${(item.price).toFixed(2)}</p>
         </div>
         <hr class="hrs">
     `).join('');
@@ -171,7 +171,10 @@ function loadPage() {
 }
 getData();
 
-
+let checkoutBtn=document.getElementById('checkout-btn');
+checkoutBtn.addEventListener('click',()=>{
+    alert("Your Order Is Placed");
+});
 
 
 

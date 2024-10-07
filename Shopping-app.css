@@ -343,21 +343,13 @@ hr{
 .item-list h2 {
     margin-bottom: 20px;
 }
-
-.cart-list {
-    /* justify-content: space-between;
-    align-items: center; */
-    /* margin-bottom: 20px;
-    padding-bottom: 20px; */
-}
-
 .cart-list img {
     width: 100px;
     height: 100px;
 }
 
-.cart-list p {
-    flex: 1;
+.cart-row p {
+    flex: 0.95;
     margin-left: 20px;
 }
 
@@ -441,8 +433,7 @@ hr{
     .item-list, .cart-summary {
         width: 100%;
         margin-bottom: 20px;
-    }
-    
+    }   
 }
 .row button{
     border: none;
@@ -475,15 +466,12 @@ hr{
 #total-price{
     margin-left: 200px;
 }
-.row{
+/* .row{
     margin-right: 100px;
-}
+}  */
 .row button{
-    margin-right: 50px;
-    margin-left: 50px;
-}
-.hrs{
-    margin-top: 10px;
+    margin-right: 25px;
+    margin-left: 25px;
 }
 .emptyCart h1{
     font-size: 35px;
@@ -520,4 +508,13 @@ hr{
     background-color: #007bff;
     color: white;
 }
-
+.cart-row1{
+    text-align: end;
+    margin-right: 80px;
+    font-weight: bold;
+    /* margin-bottom: 20px; */
+}
+.cart-row1 p{
+    position: relative;
+    bottom: 40px;
+}
